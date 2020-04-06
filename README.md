@@ -1,10 +1,21 @@
+# React Boilerplate
+
+## package.json
+
+```json
 {
   "name": "react-boiler",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    // scripts which allow us to run our webpack configs
+    // here we are running of production build version
+    // we pass in a --config flag to let webpack know which file to use
     "build": "webpack --config webpack.config.prod.js",
-    "dev": "webpack-dev-server --open --config webpack.config.dev.js"
+    // here we are running our development webpack config
+    // webpack-dev-server spins up a server that watches our project and will rebuild when we save changes
+    // the --open flag will automatically open our project in the port specififed in webpack.config.dev
+    "dev": "webpack-dev-server --config --open webpack.config.dev.js"
   },
   "license": "MIT",
   "repository": "https://github.com/BryanSmith33/react-boilerplate.git",
@@ -27,3 +38,4 @@
     "react-dom": "^16.8.6"
   }
 }
+```
